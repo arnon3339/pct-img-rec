@@ -40,4 +40,4 @@ def en_integral(en_in, en_out):
     stp_data = data.get_stp_data()
     stp_values = stp_data[(stp_data["T"] > en_in) & (stp_data["T"] < en_out)]["STOP(t)"].values
     T_values = stp_data[(stp_data["T"] > en_in) & (stp_data["T"] < en_out)]["T"].values
-    return np.trapz(stp_values, T_values)
+    return np.trapz(1/stp_values, T_values)
