@@ -19,5 +19,5 @@ def gen_new_data(data, dE = 0.01):
     return np.asarray(new_data)
 
 def expt_csv(data):
-    df = pd.DataFrame({"T": data[:, 0], "STOP(t)": data[:, 1], "1/STOP(t)": 1/data[:, 1]})
+    df = pd.DataFrame({"T": data[:, 0], "STOP(t)": data[:, 1]})
     df.to_csv("./output/data/new_data.csv", index=None)
